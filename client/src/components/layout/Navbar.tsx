@@ -6,7 +6,7 @@ import { useCartStore } from '@/store/useCartStore';
 import { useAuthStore } from '@/store/useAuthStore';
 
 export function Navbar() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const items = useCartStore((state) => state.items);
   const { user, logout } = useAuthStore();
 

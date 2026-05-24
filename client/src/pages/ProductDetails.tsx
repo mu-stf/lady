@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -26,12 +26,12 @@ const PRODUCT = {
 };
 
 export default function ProductDetails() {
-  const { slug } = useParams(); // Use slug to fetch
+  useParams(); // Use slug to fetch
   const { t, i18n } = useTranslation();
   const lang = i18n.language === 'ar' ? 'Ar' : 'En';
   const addItem = useCartStore(state => state.addItem);
 
-  const [selectedVariant, setSelectedVariant] = React.useState(PRODUCT.variants[0].id);
+  const [selectedVariant, setSelectedVariant] = useState(PRODUCT.variants[0].id);
 
   const handleAddToCart = () => {
     addItem({

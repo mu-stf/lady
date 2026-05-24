@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Package, ShoppingCart, DollarSign, Users } from 'lucide-react';
 import { formatPrice } from '@/lib/utils';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { useCartStore } from '@/store/useCartStore';
 import { Button } from '@/components/ui/button';
